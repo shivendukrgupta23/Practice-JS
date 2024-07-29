@@ -77,9 +77,50 @@ let a=300//global scope
 if(true) {
     let a=10
     const b =20
-    console.log("INNER: ",a);//block scope
+    //console.log("INNER: ",a);//block scope
 
 }
-console.log(a);
+//console.log(a);
 //console.log(b);
 //console.log(c);
+//--------------------------------------------
+
+
+function one(){
+    const username = "Shiv"
+
+    function two(){
+        const  website = "youtube"
+        console.log(username);//child function wo parent ke data ko access kr skte hai..!!.
+
+    }
+    //console.log(website);
+
+    //two()
+}
+//one()
+
+
+if(true)
+{
+    const username= "Shiv"
+    if(username=="Shiv"){
+        const website= "youtube"
+       // console.log(username + website);
+    }
+    //console.log(website);
+}
+//console.log(username);
+
+
+//------------------------------
+//console.log(addone(5));// here error doesnot comes because function isn't store .
+function addone(num){
+    return num +1
+}
+
+//addTwo(4)//here error comes because we store function in a variable const
+const addTwo = function(num){
+    return num + 2
+}
+//addTwo(4)
