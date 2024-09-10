@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning</title>
+</head>
+<bodystyle="background-color:#212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    </body>
+
+    <script>
+        function addLanguage(langName) {
+            const li=document.createElement('li');
+
+            li.innerHTML= `$ {
+                langName
+            }`
+
+             document.querySelector('.language'). append(li)
+        }
+
+        addLanguage("python") 
+        addLanguage("C")
+
+        //above approach and this approach both are same but this approach are optimized ways
+        function addOptiLanguage(langName){
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langName))
+
+            documet.querySelector('.language').appendChild(li)
+        }
+        addOptiLanguage('golang')
+
+
+
+    // Edit
+      const secongLang = document.querySelector("li:nth-child(2)")
+      //secondLang.innerHTML = "Mojo"
+      const newli = document.createElement('li')
+      newli.textContent="Mojo"
+      secondLang.replaceWith(newli)
+
+
+
+      //EDit
+
+      const firstLang=document.querySelector("li:first-child")
+      firstLang.outerHTML = '<li>TypeScript</li>' 
+
+
+      //Remove
+
+      const lastlang=document.querySelector('li:last-child')
+      lastlang.remove()
+
+
+
+    </script>
+
+</html>
