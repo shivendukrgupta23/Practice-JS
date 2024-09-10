@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events</title>
+</head>
+
+<body>
+
+
+</body>
+
+    <script>
+        // document.getElementById('owl').onclick=function(){ in this onclick provide less feature as comparsion to addlistener
+        //     alert("owl clicked")
+        // }
+
+        //attachEvent
+        //jQuery
+        //type,timeStamp,defaultPrevented,target,toElement,srcElement,currenttarget,clientX,clientY,screenX,screenY,
+        //altkey,ctrlkey,shiftkey,keyCode
+
+        //Events  propagation ka two content- event publish, event capturing
+    //     document.getElementById('images').addEventListener('click',function(e){
+    //         console.log("clicked inside the ul");
+            
+    //     },false)
+  
+    //     //when we clicked on the images url then print clicked inside the ul but when we clicked owl url then its print owl clicked then goes clicked inside the ul this is called event propogation .false means event publish and its goes bootom - to top.
+    //     //we write true  in place of false then its menas events capturing and its goes top to bottom evenst.
+
+    //     document.getElementById('owl').addEventListener('click',function(e){
+    //         console.log("owl clicked");
+    //     },false)
+
+
+    // //when we use stopPropagation then it print only google clicked
+    //     document.getElementById('google').addEventListener('click',function(e){
+    //         e.preventDefault()
+    //         e.stopPropagation()
+    //         console.log("google clicked");
+            
+    //     },false)
+     
+document.querySelector("#images").addEventListener
+('click',function(){
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id);
+        
+        let removeIt =  e.target.parentNode
+        removeIt.remove()
+
+
+    }
+
+   
+   
+
+    
+})
+ //removeIt.parentNode.removeChild(removeIt)
+
+      
+
+    </script>
+</html>
