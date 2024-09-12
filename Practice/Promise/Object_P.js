@@ -89,6 +89,13 @@ const tea = createUser("tea",250)
 //myArray.prototype.map()
 chai.printMe()
 
+//---------------------------
+// let myName="Shivendu   "
+// console.log(myName.trueLength);
+
+//--------------------------------
+//call and this in JS---------------------------------
+
 
 
 
