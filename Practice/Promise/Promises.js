@@ -1,3 +1,4 @@
+//creation of Promises
 const promiseOne= new Promise(function(reslove,reject){
     //Do an asyn task, Db calls, cryptography,newtork
     setTimeout(function(){
@@ -6,17 +7,20 @@ const promiseOne= new Promise(function(reslove,reject){
     },1000)
 })
 
+
+
+//.then ka directly connected hai resolved ke sth and next line is promises comsumed
 promiseOne.then(function(){
     console.log("Promise consumed");
     
 })
 
-
+//creation of Promises.
 new Promise(function(resolve,reject){
     setTimeout(function(){
         console.log("Async task 2");
         resolve()
-        
+         
 
     },1000)
 }).then(function(){
@@ -75,6 +79,7 @@ const  promiseFive= new Promise(function(resolve,reject){
     },1000)
 })
 
+/// async just like then but it can't handle the error
 async function consumePromiseFive(){
     try{
         const response  = await promiseFive
